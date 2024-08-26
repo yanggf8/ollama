@@ -12,7 +12,7 @@ public class MockWeatherService implements Function<MockWeatherService.Request, 
 	public enum Unit { C, F }
 	public record Request(String location, Unit unit) {}
 	public record Response(double temp, Unit unit) {}
-    private static final Logger log = LoggerFactory.getLogger(WeatherService.class);
+    private static final Logger log = LoggerFactory.getLogger(MockWeatherService.class);
 
     public MockWeatherService(){
         log.info("Mock Weather API constructed");
