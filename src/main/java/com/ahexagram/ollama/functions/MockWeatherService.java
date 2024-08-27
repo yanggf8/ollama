@@ -18,7 +18,8 @@ public class MockWeatherService implements Function<MockWeatherService.Request, 
         log.info("Mock Weather API constructed");
     }
 
-	public Response apply(Request request) {
+	@Override
+    public Response apply(Request request) {
         log.info("Mock Weather API is used 30.0");
 		return new Response(30.0, Unit.C);
 	}

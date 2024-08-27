@@ -1,7 +1,6 @@
 package com.ahexagram.ollama.functions;
 import org.springframework.ai.chat.client.ChatClient;
 
-import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,7 +42,9 @@ public class C2Controller {
             .functions("weatherFunction1")
             .call()
             .content();
-        	
+
+        //var chatClient = chatClientBuilder.build();
+                       	
         log.info("c2 response: {}",resultStr);
         return resultStr;
 
